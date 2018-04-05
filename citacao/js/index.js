@@ -7,7 +7,7 @@ $( document ).ready(function() {
 $("#botao-frase").click(getRandomQuote);
 
 //Usando a api como diz a documentação
-//com headers --> method=getQuote, format=json e lang=en --> retornando um json
+//com headers --> method=getQuote, format=jsonp e lang=en --> retornando um json
 
 function getRandomQuote() {
 	$("#spinner").toggle();
@@ -25,5 +25,5 @@ function getQuote(data) {
     $(".frase").text(data.quoteText);
     $(".autor").text(data.quoteAuthor);
     $('#share-twitter').attr('href', 'https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=' + encodeURIComponent('"' + data.quoteText + '" ' + data.quoteAuthor));
-     $("#erro").css('display','none');
+    $("#erro").css('display','none');
 }
