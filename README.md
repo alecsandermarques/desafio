@@ -1,4 +1,4 @@
-# Desafio
+# Quote Machine with JQuery
 
 ## 1. Passos para começar
 
